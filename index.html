@@ -15,7 +15,7 @@
 			<nav>
 				<ul>
                     <li><a href="#kitties">Kitties</a></li>
-					<li><a href="#horsey">Ash</a></li>
+					<li><a href="#horsey">Doggo</a></li>
 					<li><a href="#sneks">Snakes</a></li>
                 </ul>
             </nav>
@@ -24,42 +24,168 @@
 		<main>
 			<article>
 
-				<!img src="C:/Users/Shelby/Documents/CoderGirl/html-me-something/images/petsplants.png"/>
+
 
 				<section>
 					<a name="kitties"></a>
 					<h2>Shay</h2>
 					<figure>
-						<img src="C:/Users/Shelby/Documents/CoderGirl/html-me-something/images/kitties-shay-05.jpg">
+					<div class="slideshow">
+						<img class="shaySlides" src="C:/Users/Shelby/Documents/CoderGirl/html-me-something/images/kitties-shay-05.jpg" style="width:100%">
+						<img class="shaySlides" src="C:/Users/Shelby/Documents/CoderGirl/html-me-something/images/kitties-shay-06.jpg" style="width:100%">
+						<img class="shaySlides" src="C:/Users/Shelby/Documents/CoderGirl/html-me-something/images/kitties-shay-08.jpg" style="width:100%">
+						<img class="shaySlides" src="C:/Users/Shelby/Documents/CoderGirl/html-me-something/images/kitties-shay-07.jpg" style="width:100%">
+						<img class="shaySlides" src="C:/Users/Shelby/Documents/CoderGirl/html-me-something/images/kitties-shay-09.jpg" style="width:100%">
+						<img class="shaySlides" src="C:/Users/Shelby/Documents/CoderGirl/html-me-something/images/kitties-shay-12.jpg" style="width:100%">
+						<img class="shaySlides" src="C:/Users/Shelby/Documents/CoderGirl/html-me-something/images/kitties-shay-13.jpg" style="width:100%">
+						<img class="shaySlides" src="C:/Users/Shelby/Documents/CoderGirl/html-me-something/images/kitties-shay-03.jpg" style="width:100%">
+						<img class="shaySlides" src="C:/Users/Shelby/Documents/CoderGirl/html-me-something/images/kitties-shay-01.jpg" style="width:100%">					  
+						<img class="shaySlides" src="C:/Users/Shelby/Documents/CoderGirl/html-me-something/images/kitties-shay-04.jpg" style="width:100%">		
 						<figcaption>Those eyes!</figcaption>
+						<button class="w3-button w3-black w3-display-left" onclick="plusDivsShay(-1)">&#10094;</button>
+						<button class="w3-button w3-black w3-display-right" onclick="plusDivsShay(1)">&#10095;</button>
+					  </div>
+
 					</figure>
-					<p>About Shay, Shakespeare penned: "though she be but little, she is fierce!" She's also magical. Her eyes and face are everything. Shay is 8 years old and she was adopted from <a href="https://www.partnersforpetsil.org/">Partners for Pets</a> in Troy, IL in 2013.</p>
+
+					<script>
+						var slideIndexShay = 1;
+						showDivsShay(slideIndexShay);
+						
+						function plusDivsShay(n) {
+						  showDivsShay(slideIndexShay += n);
+						}
+						
+						function showDivsShay(n) {
+						  var i;
+						  var x = document.getElementsByClassName("shaySlides");
+						  if (n > x.length) {slideIndexShay = 1}
+						  if (n < 1) {slideIndexShay = x.length}
+						  for (i = 0; i < x.length; i++) {
+							x[i].style.display = "none";  
+						  }
+						  x[slideIndexShay-1].style.display = "block";  
+						}
+					</script>
+	
+
+					<p>About Shay, Shakespeare penned: "though she be but little, she is fierce!" She's also magical. Her eyes and face are <b>everything</b>.<br><br>Shay is 8 years old and she was adopted from <a href="https://www.partnersforpetsil.org/">Partners for Pets</a> in Troy, IL in 2013.</p>
 					</section>
+
 				<section>
 					<h2>Beachy</h2>
 					<figure>
-						<img src="C:/Users/Shelby/Documents/CoderGirl/html-me-something/images/kitties-beachy-04.jpg">
-						<figcaption>A soft belly that's <em>excellent</em> for petting.</figcaption>
-					</figure>
-					<p>Beachy has middle child syndrome. It is not helped by his brattiness, but he is very sweet and loving. He's a <b>great</b> big brother to Riku. Beachy is 6 and was adopted from St Louis County Animal Care & Control when he was a kitten.</p>
+						<div class="slideshow">
+							<img class="bechSlides" src="C:/Users/Shelby/Documents/CoderGirl/html-me-something/images/kitties-beachy-04.jpg" style="width:100%">
+							<img class="bechSlides" src="C:/Users/Shelby/Documents/CoderGirl/html-me-something/images/kitties-beachy-03.jpg" style="width:100%">
+							<img class="bechSlides" src="C:/Users/Shelby/Documents/CoderGirl/html-me-something/images/kitties-beachy-01.jpg" style="width:100%">
+							<img class="bechSlides" src="C:/Users/Shelby/Documents/CoderGirl/html-me-something/images/kitties-beachy-02.jpg" style="width:100%">
+							<figcaption>A soft belly that's <b>excellent</b> for petting.</figcaption>
+							<button class="w3-button w3-black w3-display-left" onclick="plusDivsBech(-1)">&#10094;</button>
+							<button class="w3-button w3-black w3-display-right" onclick="plusDivsBech(1)">&#10095;</button>
+						  </div>
+						</figure>
+						  <script>
+							var slideIndexBech = 1;
+							showDivsBech(slideIndexBech);
+							
+							function plusDivsBech(n) {
+							  showDivsBech(slideIndexBech += n);
+							}
+							
+							function showDivsBech(n) {
+							  var i;
+							  var x = document.getElementsByClassName("bechSlides");
+							  if (n > x.length) {slideIndexBech = 1}
+							  if (n < 1) {slideIndexBech = x.length}
+							  for (i = 0; i < x.length; i++) {
+								x[i].style.display = "none";  
+							  }
+							  x[slideIndexBech-1].style.display = "block";  
+							}
+						</script>
+					<p>Beachy has middle child syndrome. It is not helped by his brattiness, but he is very sweet and loving. He's a <b>great</b> big brother to Riku.<br><br>Beachy is 6 and was adopted from St Louis County Animal Care & Control when he was a kitten.</p>
 				</section>
+
 				<section>
 					<h2>Riku</h2>
 					<figure>
-						<img src="C:/Users/Shelby/Documents/CoderGirl/html-me-something/images/kitties-riku-07.jpg">
+					<div class="slideshow">
+						<img class="rikuSlides" src="C:/Users/Shelby/Documents/CoderGirl/html-me-something/images/kitties-riku-04.jpg" style="width:100%">
+						<img class="rikuSlides" src="C:/Users/Shelby/Documents/CoderGirl/html-me-something/images/kitties-riku-03.jpg" style="width:100%">
+						<img class="rikuSlides" src="C:/Users/Shelby/Documents/CoderGirl/html-me-something/images/kitties-riku-01.jpg" style="width:100%">
+						<img class="rikuSlides" src="C:/Users/Shelby/Documents/CoderGirl/html-me-something/images/kitties-riku-07.jpg" style="width:100%">
+						<img class="rikuSlides" src="C:/Users/Shelby/Documents/CoderGirl/html-me-something/images/kitties-riku-05.jpg" style="width:100%">
+						<img class="rikuSlides" src="C:/Users/Shelby/Documents/CoderGirl/html-me-something/images/kitties-riku-06.jpg" style="width:100%">
+						<img class="rikuSlides" src="C:/Users/Shelby/Documents/CoderGirl/html-me-something/images/kitties-riku-02.jpg" style="width:100%">				  
+						<img class="rikuSlides" src="C:/Users/Shelby/Documents/CoderGirl/html-me-something/images/kitties-01.jpg" style="width:100%">
 						<figcaption>What a chonker.</figcaption>
+						<button class="w3-button w3-black w3-display-left" onclick="plusDivsRiku(-1)">&#10094;</button>
+						<button class="w3-button w3-black w3-display-right" onclick="plusDivsRiku(1)">&#10095;</button>
+					  </div>
 					</figure>
-					<p>Riku is the baby, which means he is very cute, very manipulative, and very spoiled. He gets away with everything. He also has no neck. Riku is 5 and I found him in an acquaintance's yard in Independence, MO when he was 12 weeks old.</p>
-                </section>
+					  <script>
+						var slideIndexRiku = 1;
+						showDivsRiku(slideIndexRiku);
+						
+						function plusDivsRiku(n) {
+						  showDivsRiku(slideIndexRiku += n);
+						}
+						
+						function showDivsRiku(n) {
+						  var i;
+						  var x = document.getElementsByClassName("rikuSlides");
+						  if (n > x.length) {slideIndexRiku = 1}
+						  if (n < 1) {slideIndexRiku = x.length}
+						  for (i = 0; i < x.length; i++) {
+							x[i].style.display = "none";  
+						  }
+						  x[slideIndexRiku-1].style.display = "block";  
+						}
+					</script>
+					<p>Riku is the baby, which means he is very cute, very manipulative, and very spoiled. He gets away with everything. He also has no neck.<br><br>Riku is 5 and I found him in an acquaintance's yard in Independence, MO when he was 12 weeks old.</p>
+				</section>
+				
                 <section>
 					<a name="horsey"></a>
 					<h2>Ash</h2>
 					<figure>
-						<img src="C:/Users/Shelby/Documents/CoderGirl/html-me-something/images/dog-ash-08.jpg" alt="ash alt caption">
-						<figcaption>My best friend and soul dog.</figcaption>
-					</figure>
+						<div class="slideshow">
+							<img class="ashSlides" src="C:/Users/Shelby/Documents/CoderGirl/html-me-something/images/dog-ash-08.jpg" style="width:100%">
+							<img class="ashSlides" src="C:/Users/Shelby/Documents/CoderGirl/html-me-something/images/dog-ash-02.jpg" style="width:100%">
+							<img class="ashSlides" src="C:/Users/Shelby/Documents/CoderGirl/html-me-something/images/dog-ash-01.jpg" style="width:100%">
+							<img class="ashSlides" src="C:/Users/Shelby/Documents/CoderGirl/html-me-something/images/dog-ash-03.jpg" style="width:100%">
+							<img class="ashSlides" src="C:/Users/Shelby/Documents/CoderGirl/html-me-something/images/dog-ash-04.jpg" style="width:100%">
+							<img class="ashSlides" src="C:/Users/Shelby/Documents/CoderGirl/html-me-something/images/dog-ash-05.jpg" style="width:100%">
+							<img class="ashSlides" src="C:/Users/Shelby/Documents/CoderGirl/html-me-something/images/dog-ash-06.jpg" style="width:100%">
+							<img class="ashSlides" src="C:/Users/Shelby/Documents/CoderGirl/html-me-something/images/dog-ash-07.jpg" style="width:100%">			  
+							<figcaption>My best friend and soul dog.</figcaption>
+							<button class="w3-button w3-black w3-display-left" onclick="plusDivsAsh(-1)">&#10094;</button>
+							<button class="w3-button w3-black w3-display-right" onclick="plusDivsAsh(1)">&#10095;</button>
+						</div>
+						</figure>
+						<script>
+							var slideIndexAsh = 1;
+							showDivsAsh(slideIndexAsh);
+							
+							function plusDivsAsh(n) {
+							showDivsAsh(slideIndexAsh += n);
+							}
+							
+							function showDivsAsh(n) {
+							var i;
+							var x = document.getElementsByClassName("ashSlides");
+							if (n > x.length) {slideIndexAsh = 1}
+							if (n < 1) {slideIndexAsh = x.length}
+							for (i = 0; i < x.length; i++) {
+								x[i].style.display = "none";  
+							}
+							x[slideIndexAsh-1].style.display = "block";  
+							}
+						</script>
 					<p>Wow, where do I even begin? Ash is a 3 year old blue merle Australian shepherd. I knew it would be fun to get a dog, but I never imagined he would be so loving, sweet, goofy and exuberant. His happiness is contagious, he loves everyone and he's the life of the party, always. I am honored <em><b>every day</b></em> to be his mom and friend.</p>
-                </section>
+				</section>
+				
                 <section>
 					<a name="sneks"></a>
 					<h2>Ari</h2>
@@ -107,11 +233,16 @@
 						<img src="C:/Users/Shelby/Documents/CoderGirl/html-me-something/images/snakes-saturn-03.jpg">
 						<figcaption>So pretty!</figcaption>
 					</figure>
-					<p>Saturn is an amazing 3-year-old palmetto corn snake. He's one of my dream snakes! I was so happy to bring him home this year. He is white with multi-colored speckles. He loves hair and will sit on my head in my hair for hours. (Fun fact: this is a pretty common past time for snakes.)</p>
+					<p>Saturn is an amazing 3-year-old palmetto corn snake. He's one of my dream snakes! I was so happy to bring him home this year. His speckles have lots of colors, including orange, yellow, gray, black, white and red. He loves hair and will sit on my head in my hair for hours. (Fun fact: this is a pretty common past time for snakes.)</p>
                 </section>
-                
+				
+				
+<!-- SHOUT OUT to w3 schools for the manual slideshow and js code! you tha real mvp
+https://www.w3schools.com/w3css/w3css_slideshow.asp -->
+
 			</article>
 		</main>
+
 
 		<footer>
 			<p>&copy; 2020 Shelby Donais</p>
